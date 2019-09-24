@@ -35,8 +35,15 @@ public class WordCounter
         while(in.hasNextLine())
         {
             String line = in.nextLine();
+            if(line.isBlank())
+            {
+            	result = 0;
+            }
+            else
+            {
             String[] arr = line.split("\\s+");
             result = arr.length;
+            }
             out.println(result + "   " + line);
             
             
